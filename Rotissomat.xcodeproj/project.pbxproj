@@ -110,7 +110,7 @@
 				};
 			};
 			buildConfigurationList = 17EA40C4272BF30800EB3817 /* Build configuration list for PBXProject "Rotissomat" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
