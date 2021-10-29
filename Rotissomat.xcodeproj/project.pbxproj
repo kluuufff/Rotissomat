@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		17EA40CD272BF30900EB3817 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA40CC272BF30900EB3817 /* AppDelegate.swift */; };
-		17EA40CF272BF30900EB3817 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA40CE272BF30900EB3817 /* SceneDelegate.swift */; };
 		17EA40D1272BF30900EB3817 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA40D0272BF30900EB3817 /* ViewController.swift */; };
 		17EA40D4272BF30900EB3817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EA40D2272BF30900EB3817 /* Main.storyboard */; };
 		17EA40D6272BF30C00EB3817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17EA40D5272BF30C00EB3817 /* Assets.xcassets */; };
 		17EA40D9272BF30C00EB3817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EA40D7272BF30C00EB3817 /* LaunchScreen.storyboard */; };
+		17EA40E2272BF40200EB3817 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA40E1272BF40200EB3817 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17EA40C9272BF30900EB3817 /* Rotissomat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rotissomat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EA40CC272BF30900EB3817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		17EA40CE272BF30900EB3817 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		17EA40D0272BF30900EB3817 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		17EA40D3272BF30900EB3817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17EA40D5272BF30C00EB3817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17EA40D8272BF30C00EB3817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17EA40DA272BF30C00EB3817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17EA40E1272BF40200EB3817 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,23 @@
 		17EA40CB272BF30900EB3817 /* Rotissomat */ = {
 			isa = PBXGroup;
 			children = (
-				17EA40CC272BF30900EB3817 /* AppDelegate.swift */,
-				17EA40CE272BF30900EB3817 /* SceneDelegate.swift */,
 				17EA40D0272BF30900EB3817 /* ViewController.swift */,
+				17EA40E1272BF40200EB3817 /* InfoViewController.swift */,
 				17EA40D2272BF30900EB3817 /* Main.storyboard */,
-				17EA40D5272BF30C00EB3817 /* Assets.xcassets */,
-				17EA40D7272BF30C00EB3817 /* LaunchScreen.storyboard */,
+				17EA40E0272BF32200EB3817 /* SupportedFiles */,
 				17EA40DA272BF30C00EB3817 /* Info.plist */,
 			);
 			path = Rotissomat;
+			sourceTree = "<group>";
+		};
+		17EA40E0272BF32200EB3817 /* SupportedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				17EA40CC272BF30900EB3817 /* AppDelegate.swift */,
+				17EA40D5272BF30C00EB3817 /* Assets.xcassets */,
+				17EA40D7272BF30C00EB3817 /* LaunchScreen.storyboard */,
+			);
+			path = SupportedFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +148,7 @@
 			files = (
 				17EA40D1272BF30900EB3817 /* ViewController.swift in Sources */,
 				17EA40CD272BF30900EB3817 /* AppDelegate.swift in Sources */,
-				17EA40CF272BF30900EB3817 /* SceneDelegate.swift in Sources */,
+				17EA40E2272BF40200EB3817 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,10 +301,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Rotissomat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +317,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,10 +332,13 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Rotissomat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +348,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
