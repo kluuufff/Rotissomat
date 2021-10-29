@@ -37,7 +37,9 @@ class ViewController: UIViewController {
         timeLabel.textColor = .white
         let gestures = UILongPressGestureRecognizer(target: self,
                                                     action: #selector(startRecord))
-        self.mainScreen.addGestureRecognizer(gestures)
+        DispatchQueue.main.async {
+            self.mainScreen.addGestureRecognizer(gestures)
+        }
         overlay = createOverlay(frame: view.frame,
                                 xOffset: view.frame.midX,
                                 yOffset: view.frame.midY,
@@ -61,11 +63,13 @@ class ViewController: UIViewController {
     @objc func startRecord(gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
             timeLabel.textColor = .red
-            timer = Timer.scheduledTimer(timeInterval: 1.0,
-                                         target: self,
-                                         selector: #selector(recordTime),
-                                         userInfo: nil,
-                                         repeats: true)
+            DispatchQueue.main.async {
+                self.timer = Timer.scheduledTimer(timeInterval: 1.0,
+                                             target: self,
+                                                  selector: #selector(self.recordTime),
+                                             userInfo: nil,
+                                             repeats: true)
+            }
         } else {
             timeLabel.textColor = .white
             timer?.invalidate()
@@ -73,15 +77,17 @@ class ViewController: UIViewController {
     }
     
     @objc func recordTime() {
-        var minutes: Int
-        var seconds: Int
+        var minutes: Int = 0
+        var seconds: Int = 0
         if totalSeconds == 0 {
             timer?.invalidate()
         }
-        totalSeconds = totalSeconds + 1
-        minutes = (totalSeconds % 3600) / 60
-        seconds = (totalSeconds % 3600) % 60
-        timeLabel.text = String(format: "%02d:%02d", minutes, seconds)
+        DispatchQueue.main.async {
+            self.totalSeconds = self.totalSeconds + 1
+            minutes = (self.totalSeconds % 3600) / 60
+            seconds = (self.totalSeconds % 3600) % 60
+            self.timeLabel.text = String(format: "%02d:%02d", minutes, seconds)
+        }
     }
     
     private func checkCameraPermissions() {
@@ -108,14 +114,15 @@ class ViewController: UIViewController {
     
     private func getFrontCamera() -> AVCaptureDevice?{
         let videoDevices = AVCaptureDevice.devices(for: AVMediaType.video)
-        var result: AVCaptureDevice!
+//        var result: AVCaptureDevice!
         for device in videoDevices {
             let device = device
             if device.position == AVCaptureDevice.Position.front {
-                result = device
+//                result = device
+                return device
             }
         }
-        return result
+        return nil
     }
     
     private func getBackCamera() -> AVCaptureDevice{
