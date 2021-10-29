@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     private var previewLayer = AVCaptureVideoPreviewLayer()
     private var currentCaptureDevice: AVCaptureDevice?
     private var outputCapturePhoto = AVCaptureStillImageOutput()
-    private var infoMode = false
     private var ghostMode = false
     private var flashMode = false
     private var cameraModeFlag = false
