@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		173FF47A272D5EBD0001F83C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17EA40C9272BF30900EB3817 /* Rotissomat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rotissomat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EA40CC272BF30900EB3817 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17EA40D0272BF30900EB3817 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 				17EA40CC272BF30900EB3817 /* AppDelegate.swift */,
 				17EA40D5272BF30C00EB3817 /* Assets.xcassets */,
 				17EA40D7272BF30C00EB3817 /* LaunchScreen.storyboard */,
+				173FF47A272D5EBD0001F83C /* Info.plist */,
 			);
 			path = SupportedFiles;
 			sourceTree = "<group>";
